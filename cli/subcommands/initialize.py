@@ -29,9 +29,9 @@ class Initialize(Subcommand):
         sage_folder = project_root / ".sage"
 
         # 2. Create folder structure
-        sage_folder.mkdir(parents=True, exist_ok=False)
-        (sage_folder / "logs").mkdir()
-        (sage_folder / "repos").mkdir()
+        sage_folder.mkdir(parents=True, exist_ok=True)
+        (sage_folder / "logs").mkdir(exist_ok=True)
+        (sage_folder / "repos").mkdir(exist_ok=True)
 
         # 3. Create config.json
         config = {"root": str(project_root)}
