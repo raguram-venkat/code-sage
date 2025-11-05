@@ -11,3 +11,9 @@ wheels/
 
 # Idea
 idea.md
+
+# Alias
+powershell-alias.md
+
+# Testing .sage folder
+.sage/

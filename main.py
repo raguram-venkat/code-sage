@@ -1,6 +1,7 @@
 import sys
 import shlex
 from cli.app import sage_parser
+from core.test_db import main as test_db_main
 
 def repl():
     print("Sage Interactive CLI — type 'exit' or 'quit' to leave.")
@@ -33,7 +34,12 @@ def repl():
             print(f"Error: {e}")
 
 def main():
-    repl()
+    # args = sage_parser.parse_args()
+    # if hasattr(args, "func"):
+    #     args.func(args)
+    # else:
+    #     sage_parser.print_help()
+    test_db_main()
 
 
 if __name__ == "__main__":
